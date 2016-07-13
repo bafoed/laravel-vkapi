@@ -108,7 +108,7 @@ class VKAPIClass
         }
 
         if(isset($json['error'])) {
-            $exception = new VkapiException($json['error']['error_code'], $json['error']['error_msg']);
+            $exception = new VKAPIException($json['error']['error_code'], $json['error']['error_msg']);
             throw $exception;
         }
 
